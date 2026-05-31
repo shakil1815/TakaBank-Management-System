@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TakaBank | Admin Portal</title>
+    <link rel="stylesheet" href="TakaBankSystem.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-building-columns"></i>
+            <span>TakaBank</span>
+        </div>
+        <p class="subtitle">Management System</p>
+    </header>
+
+    <main class="dashboard">
+        
+        <div class="full-width">
+            <div id="outputBox" class="alert-box">
+                <i class="fa-solid fa-circle-info"></i> Welcome to TakaBank Admin Portal. System is ready.
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-user-plus"></i>
+                <h2>Create Account</h2>
+            </div>
+            <div class="card-body">
+                <input type="number" id="createAccNum" placeholder="Account Number (e.g. 101)">
+                <input type="text" id="createName" placeholder="Account Holder Name">
+                <input type="number" id="createBalance" placeholder="Initial Deposit (BDT)">
+                <button class="btn btn-primary" onclick="createAccount()">Open Account</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-money-right-to-left"></i>
+                <h2>Transactions</h2>
+            </div>
+            <div class="card-body">
+                <input type="number" id="transAccNum" placeholder="Account Number">
+                <input type="number" id="transAmount" placeholder="Amount (BDT)">
+                <div class="btn-group">
+                    <button class="btn btn-success" onclick="transaction('deposit')">
+                        <i class="fa-solid fa-arrow-down"></i> Deposit
+                    </button>
+                    <button class="btn btn-danger" onclick="transaction('withdraw')">
+                        <i class="fa-solid fa-arrow-up"></i> Withdraw
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card full-width">
+            <div class="card-header">
+                <i class="fa-solid fa-address-card"></i>
+                <h2>Account Details</h2>
+            </div>
+            <div class="card-body search-area">
+                <input type="number" id="dispAccNum" placeholder="Enter Account Number to Search">
+                <button class="btn btn-secondary" onclick="displayAccount()">
+                    <i class="fa-solid fa-magnifying-glass"></i> Search
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="TakaBankSystem.js"></script>
+</body>
+</html>
