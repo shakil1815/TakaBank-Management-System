@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TakaBankSystem</title>
+    <link rel="stylesheet" href="TakaBankSystem.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TakaBank System</h1>
+        
+        <div id="outputBox" class="output-box">Welcome to TakaBank!</div>
+
+        <div class="card">
+            <h2>1. Create Account</h2>
+            <input type="number" id="createAccNum" placeholder="Account Number">
+            <input type="text" id="createName" placeholder="Account Holder Name">
+            <input type="number" id="createBalance" placeholder="Initial Deposit (BDT)">
+            <button onclick="createAccount()">Create Account</button>
+        </div>
+
+        <div class="card">
+            <h2>2 & 3. Transactions</h2>
+            <input type="number" id="transAccNum" placeholder="Account Number">
+            <input type="number" id="transAmount" placeholder="Amount (BDT)">
+            <button class="btn-deposit" onclick="transaction('deposit')">Deposit Money</button>
+            <button class="btn-withdraw" onclick="transaction('withdraw')">Withdraw Money</button>
+        </div>
+
+        <div class="card">
+            <h2>4. Display Account</h2>
+            <input type="number" id="dispAccNum" placeholder="Account Number">
+            <button class="btn-display" onclick="displayAccount()">Show Details</button>
+        </div>
+    </div>
+
+    <script src="TakaBankSystem.js"></script>
+</body>
+</html>
